@@ -6,3 +6,5 @@ Steps to reproduce:
 2. Expand all the cells (by tapping on them).
 3. Collapse cells in the following sequence: 3, 1, 2 (without touching cell #0 or scrolling the screen).
 4. The tableView's contentOffset is negative, which results in a white area at the top of the screen that doesn't go away until you touch the screen.
+
+The bug seems to be called by a `0` estimated cell height (set in the storyboard). It can be fixed by setting estimated row height to "Automatic" in the storyboard, or by implementing a proper `estimatedHeightForRow:atIndexPath:` method.
