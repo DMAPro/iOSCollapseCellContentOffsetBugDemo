@@ -10,3 +10,5 @@ Steps to reproduce:
 The bug seems to be called by a `0` estimated cell height (set in the storyboard). It can be fixed by setting estimated row height to "Automatic" in the storyboard, or by implementing a proper `estimatedHeightForRow:atIndexPath:` method.
 
 See the .mov file in this repo for a video of the issue.
+
+The bug is submitted to Apple as https://openradar.appspot.com/48977017
