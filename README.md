@@ -8,3 +8,5 @@ Steps to reproduce:
 4. The tableView's contentOffset is negative, which results in a white area at the top of the screen that doesn't go away until you touch the screen.
 
 The bug seems to be called by a `0` estimated cell height (set in the storyboard). It can be fixed by setting estimated row height to "Automatic" in the storyboard, or by implementing a proper `estimatedHeightForRow:atIndexPath:` method.
+
+See the .mov file in this repo for a video of the issue.
